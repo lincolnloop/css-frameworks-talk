@@ -9,8 +9,9 @@ UNDER THE HOOD OF MODERN CSS FRAMEWORKS: NOTES
 6. Components / Patterns
 7. Bonus stuff: themes, icons, animations
 8. Testing
+9. Documentation (?)
 
-# What really makes up a CSS framework?
+# What makes up a CSS framework?
 
 ## Common Patterns
 
@@ -60,6 +61,11 @@ Your reset != Default styles. They should really just be to level out the browse
 
 Sooo... do you need a third-party reset? Do you need to reset <kbd>, <hr>, etc.
 
+## Individual Tricks
+
+* Using border-box to make everything match the exact sizes you specify.
+*
+
 Resources:
 
 * http://jaydenseric.com/blog/forget-normalize-or-resets-lay-your-own-css-foundation (doesn't account for forms)
@@ -79,7 +85,24 @@ Foundation puts a lot of configuration in its related system (typography config 
 
 However, local (file-only vars) are probably fine in a file.
 
-# Typography & Rhythm
+Breakpoints as configuration provides a relationship between them.
+
+Grouping similar variables in maps (dictionaries) is a good way avoid pollution. Namespacing configuration can help with this.
+
+# Typography & Vertical Rhythm
+
+First off - good typography is hard. Vertical rhythm is even harder.
+
+Vertical rhythm is sizing and spacing between elements and typography that feels in sync.
+
+*Most* CSS frameworks give you the basics. Way out of scope of this talk to get into good typography. Also hard to build a one-size-fits-all typography system.
+
+Basic typography system in a framework is:
+
+1. Base font size
+2. Base line-height
+3.
+
 
 # Color
 
@@ -113,3 +136,5 @@ https://github.com/zurb/foundation-sites/blob/develop/scss/util/_flex.scss - Lin
 @mixin flex-order($order: 0) {
   order: $order;
 }
+
+Note when working around browser quirks.
